@@ -23,4 +23,134 @@ img {
   height: auto;
 }
 
+body {
+  font-size: 14px;
+  font-family: "Open-Sans", sans-serif;
+  color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  line-height: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+img {
+  margin-bottom: 1.3rem;
+}
+
+section, footer {
+  margin: 0;
+  padding: 5%;
+}
+
+section {
+  background-color: #181f2a;
+}
+section.testimonials {
+  background-color: #202a3c;
+}
+
+footer {
+  background-color: #0b1523;
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+}
+a:visited {
+  color: inherit;
+}
+
+.top-section {
+  background-image: url(images/bg-curvy-mobile.svg);
+  background-color: #1c2431;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+}
+.top-section .top-nav {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-section .top-nav img {
+  width: 25%;
+}
+.top-section .top-nav div {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  color: grey;
+}
+.top-section .top-nav div a:nth-child(2) {
+  padding: 0 1.5rem;
+}
+.top-section .top-content {
+  padding: 5%;
+  text-align: center;
+}
+.top-section .top-content h1 {
+  font-size: 1.5rem;
+}
+.top-section .top-content button {
+  font-family: inherit;
+  font-weight: 400;
+  background-color: #339ecc;
+  border-radius: 28px;
+  border: 1px solid #000;
+  color: #ffffff;
+  font-size: 0.85rem;
+  padding: 15px 85px;
+  text-decoration: none;
+  text-shadow: 0px 0px 0px #2f6627;
+}
+.top-section .top-content button:hover {
+  background-color: #65e2d9;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+  a, p {
+    font-size: 1.2rem;
+  }
+
+  .top-section {
+    background-image: url(images/bg-curvy-desktop.svg);
+  }
+  .top-section .top-content {
+    padding: 10%;
+  }
+  .top-section .top-content img {
+    width: 70%;
+  }
+  .top-section .top-content h1 {
+    font-size: 1.8rem;
+  }
+  .top-section .top-content p {
+    line-height: normal;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1440px) and (-webkit-min-device-pixel-ratio: 2) {
+  p {
+    font-size: 1.2rem;
+  }
+
+  .top-section .top-content {
+    padding: 0 20% 10%;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
