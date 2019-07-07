@@ -87,6 +87,7 @@ a:visited {
 }
 .top-section .top-nav img {
   width: 25%;
+  max-width: 250px;
 }
 .top-section .top-nav div {
   display: flex;
@@ -104,6 +105,7 @@ a:visited {
 }
 .top-section .top-content h1 {
   font-size: 1.5rem;
+  margin: 0 auto;
 }
 .top-section .top-content button {
   font-family: inherit;
@@ -122,34 +124,78 @@ a:visited {
   cursor: pointer;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+.features-section {
+  text-align: center;
+}
+.features-section .grid {
+  display: grid;
+}
+.features-section .features div {
+  margin-bottom: 5rem;
+}
+
+.productive .productive-img {
+  text-align: center;
+}
+.productive div h1 {
+  margin-top: 3rem;
+}
+.productive div p {
+  text-align: left;
+}
+.productive div a {
+  color: #65e2d9;
+  text-decoration: underline;
+}
+.productive div img {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
   a, p {
     font-size: 1.2rem;
+    line-height: 1.5;
   }
 
   .top-section {
     background-image: url(images/bg-curvy-desktop.svg);
   }
   .top-section .top-content {
-    padding: 10%;
-  }
-  .top-section .top-content img {
-    width: 70%;
+    padding: 0 25%;
   }
   .top-section .top-content h1 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
+    margin: 3rem 0;
   }
   .top-section .top-content p {
-    line-height: normal;
-  }
-}
-@media (min-width: 1025px) and (max-width: 1440px) and (-webkit-min-device-pixel-ratio: 2) {
-  p {
-    font-size: 1.2rem;
+    margin: 0 0 2rem;
   }
 
-  .top-section .top-content {
-    padding: 0 20% 10%;
+  .features-section {
+    padding: 0 10%;
+  }
+  .features-section .grid {
+    display: grid;
+    grid-template: "access security" 50% "collab store" 50%/50% 50%;
+  }
+  .features-section .features div {
+    padding: 1rem 5rem;
+  }
+
+  .productive {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .productive .productive-img {
+    width: 70vw;
+    margin-right: 70px;
+  }
+  .productive .productive-content h1 {
+    font-size: 2.2rem;
+    width: 50%;
+    text-align: left;
   }
 }
 

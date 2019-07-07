@@ -73,6 +73,7 @@ a {
     @include flex(row, space-between, center);
     img {
       width: 25%;
+      max-width: 250px;
     }
     div {
       @include flex(row, space-between, center);
@@ -88,6 +89,7 @@ a {
     text-align: center;
     h1 {
       font-size: 1.5rem;
+      margin: 0 auto;
     }
     button {
     font-family: inherit;
@@ -108,40 +110,97 @@ a {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+// Features Section
+
+.features-section {
+  text-align: center;
+  .grid {
+    display: grid;
+  }
+  .features {
+    div {
+      margin-bottom: 5rem;
+    }
+  }
+}
+
+// Productive section
+
+.productive {
+  .productive-img {
+    text-align: center;
+  }
+  div {
+    h1 {
+      margin-top: 3rem;
+    }
+    p {
+      text-align: left;
+    }
+    a {
+      color: hsl(176, 68%, 64%);
+      text-decoration: underline;
+    }
+    img {
+      margin: 0;
+    }
+  }
+}
+
+@media (min-width: 768px) {
 
   a, p {
     font-size: 1.2rem;
+    line-height: 1.5;
   }
 
+  // Top Section
   .top-section {
     background-image: url(images/bg-curvy-desktop.svg);
     .top-content {
-      padding: 10%;
-      img {
-        width: 70%;
-      }
+      padding: 0 25%;
       h1 {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
+        margin: 3rem 0;
       }
       p {
-        line-height: normal;
+        margin: 0 0 2rem;
+      }
+    }
+  }
+
+  // Features Section
+
+  .features-section {
+    padding: 0 10%;
+
+    .grid {
+      display: grid;
+      grid-template: "access security" 50%
+                     "collab store" 50%
+                     / 50% 50%;
+    }
+    .features {
+      div {
+        padding: 1rem 5rem;
+      }
+    }
+  }
+
+  // Productive Section
+
+  .productive {
+    @include flex (row, center, center);
+    .productive-img {
+      width: 70vw;
+      margin-right: 70px;
+    }
+    .productive-content {
+      h1 {
+        font-size: 2.2rem;
+        width: 50%  ;
+        text-align: left;
       }
     }
   }
 }
-
-@media (min-width: 1025px) and (max-width: 1440px) and (-webkit-min-device-pixel-ratio: 2) {
-
-  p {
-    font-size: 1.2rem;
-  }
-  .top-section {
-    .top-content {
-      padding: 0 20% 10%;
-    }
-  }
-
-}
-
-// Features Section
